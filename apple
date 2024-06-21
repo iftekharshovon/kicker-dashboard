@@ -1,0 +1,75 @@
+<body class="bg-gray-900 text-gray-300">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="bg-gray-800 w-64 p-4">
+            <div class="text-white text-2xl mb-8">Cannki Inc.</div>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Dashboard</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Company</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Billing</a></li>
+                    <li class="mt-8 mb-2 text-gray-500">Discover More Products</li>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Agent</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Mailroom</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Accounting</a></li>
+                    <li class="mt-8 mb-2 text-gray-500">Partner Solutions</li>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Banking</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Equity</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Expense Management</a></li>
+                    <li class="mt-8 mb-2 text-gray-500">Other</li>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Rewards</a></li>
+                    <li class="mb-4"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Refer and Earn</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-4">STEP 1</h2>
+                    <div class="text-sm text-gray-500 mb-2">Company formation</div>
+                    <div class="text-green-500">Complete</div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-4">STEP 2</h2>
+                    <div class="text-sm text-gray-500 mb-2">Business banking</div>
+                    <a href="#" class="text-blue-400 hover:underline">Get a free checking and savings account before you receive your EIN.</a>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-4">STEP 3</h2>
+                    <div class="text-sm text-gray-500 mb-2">Post-formation documents</div>
+                    <div class="text-green-500">Complete</div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-4">STEP 4</h2>
+                    <div class="text-sm text-gray-500 mb-2">Tax ID (EIN)</div>
+                    <div class="text-gray-500">3 business days on e...</div>
+                </div>
+            </div>
+            
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-4">Additional information</h2>
+                    <div class="text-gray-500 mb-2">Provide additional information about the company</div>
+                    <button class="bg-red-500 text-white px-4 py-2 rounded">Complete Task</button>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-4">Activate Firstbase Agent™ in Delaware</h2>
+                    <div class="text-gray-500 mb-2">Agent automates everything your company needs to stay 100% compliant in Delaware. Sign up now to never miss a compliance deadline again!</div>
+                    <button class="bg-red-500 text-white px-4 py-2 rounded">Complete Task</button>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-4">Carta - cap table</h2>
+                    <div class="text-gray-500 mb-2">Manage your shareholders equity with Carta by setting up your free Carta account today.</div>
+                    <button class="bg-red-500 text-white px-4 py-2 rounded">Get started</button>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-4">Firstbase Accounting</h2>
+                    <div class="text-gray-500 mb-2">Effortless bookkeeping and monthly financial reporting for your business. Streamlined communication for a precise overview of your finances.</div>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Learn more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

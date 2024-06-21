@@ -1,0 +1,11 @@
+.drawer {
+  transition: transform 0.3s ease-in-out;
+}
+.drawer-hidden {
+  transform: translateX(-100%);
+  display: none;
+}
+.drawer-visible {
+  transform: translateX(0);
+  display: visible;
+}
