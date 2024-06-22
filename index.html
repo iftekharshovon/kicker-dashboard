@@ -261,15 +261,22 @@
             </svg>
           </div>
           <div
-            class="absolute z-10 flex-col items-start hidden w-full pb-1 bg-white shadow-lg group-focus:flex"
+            class="absolute left-4 z-10 flex-col items-start hidden w-5/6 mx-auto pb-1 bg-slate-100 shadow-lg group-focus:flex"
           >
-            <a class="w-full px-4 py-2 text-left hover:bg-gray-300" href="#">
+            <a
+              class="flex gap-3 items-center w-full h-10 px-2 text-sm font-medium rounded hover:bg-gray-300"
+              href="#"
+            >
               Menu Item 1</a
             >
-            <a class="w-full px-4 py-2 text-left hover:bg-gray-300" href="#"
+            <a
+              class="flex gap-3 items-center w-full h-10 px-2 text-sm font-medium rounded hover:bg-gray-300"
+              href="#"
               >Menu Item 1</a
             >
-            <a class="w-full px-4 py-2 text-left hover:bg-gray-300" href="#"
+            <a
+              class="flex gap-3 items-center w-full h-10 px-2 text-sm font-medium rounded hover:bg-gray-300"
+              href="#"
               >Menu Item 1</a
             >
           </div>
@@ -484,7 +491,601 @@
           </button>
         </div>
         <div class="flex-grow p-6 overflow-auto bg-gray-200">
-          <div id="dashboardContent"></div>
+          <div class="mt-8 mx-auto md:mt-12 max-w-264">
+            <div class="px-4">
+              <span class="text-4xl font-bold"> Welcome home, Kicker </span>
+              <div class="border-t border-gray-300 pt-2 pb-6 mt-2"></div>
+
+              <div class="flex justify-between md:justify-start items-center">
+                <div class="text-xl font-bold mr-4">My updates</div>
+                <a class="cursor-pointer transition-all duration-200">
+                  <!---->
+                </a>
+              </div>
+
+              <div>
+                <div
+                  role="button"
+                  class="bg-white flex md:flex-row flex-col items-center justify-between md:border-0 p-4 my-4 hover:shadow-md rounded-md bg-slate-50"
+                >
+                  <div class="flex items-center flex-wrap">
+                    <div class="flex text-red-600">
+                      <div class="mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M11 17h2v-6h-2zm1-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="font-bold mx-2">
+                        ATTENTION - Reporting under the 2024 FinCEN regulation
+                        is required!
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="mr-4">
+                      Avoid a $500 fine for each day that passes after the
+                      deadline for filing your Beneficial Ownership Information
+                      (BOI) report.
+                    </div>
+                  </div>
+                  <div
+                    class="self-start md:self-auto mt-2 md:mt-0 flex items-center"
+                  >
+                    <div class="md:hidden inline mr-3">File my BOI report</div>
+                  </div>
+                </div>
+              </div>
+              <div class="md:hidden flex">
+                <div>
+                  <div
+                    role="button"
+                    class="h-20 flex md:hidden items-center justify-between p-8 pb-0 md:p-0"
+                  >
+                    <i
+                      class="icon-angle-left text-bp-text-icons-action"
+                      aria-hidden="true"
+                      style="font-family: icomoon, Bangla336, sans-serif"
+                    ></i>
+                    <div
+                      class="font-gazpacho text-xl font-bold mr-4"
+                      style="
+                        font-family: 'Gazpacho Bold', Bangla336, sans-serif;
+                      "
+                    >
+                      Updates
+                    </div>
+                    <div></div>
+                  </div>
+                  <div
+                    role="button"
+                    data-testing-id="management-dashboard-updates-boi_reminder.no_llc"
+                    class="bg-white flex md:flex-row flex-col items-center justify-between md:border-0 p-4 border-bp-border-action/10 my-4 hover:shadow-md mx-4 md:rounded-md md:mx-0 border-t-2 animate-fade-in"
+                  >
+                    <div class="flex items-center flex-wrap">
+                      <div class="flex">
+                        <div
+                          class="icon-exclamation-circle text-bp-base-negative mt-1"
+                          style="font-family: icomoon, Bangla336, sans-serif"
+                        ></div>
+
+                        <div class="font-bold mx-2 text-bp-base-negative">
+                          ATTENTION - Reporting under the 2024 FinCEN regulation
+                          is required!
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="mr-4 text-bp-text-icons-subdued">
+                        Avoid a $500 fine for each day that passes after the
+                        deadline for filing your Beneficial Ownership
+                        Information (BOI) report.
+                      </div>
+                    </div>
+                    <div
+                      class="self-start md:self-auto mt-2 md:mt-0 flex items-center"
+                    >
+                      <div
+                        class="md:hidden inline text-bp-text-icons-action mr-3"
+                      >
+                        File my BOI report
+                      </div>
+                      <i
+                        class="icon-angle-right text-bp-text-icons-action"
+                        aria-hidden="true"
+                        style="font-family: icomoon, Bangla336, sans-serif"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cp-business-guidance-container md:pr-4">
+              <span
+                class="font-gazpacho text-xl font-bold pl-4"
+                style="font-family: 'Gazpacho Bold', Bangla336, sans-serif"
+              >
+                My recommendations
+              </span>
+              <!---->
+              <div
+                class="flex overflow-y-scroll md:overflow-y-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 py-4 pl-4 business-guide-task-container"
+              >
+                <div
+                  class="bg-slate-50 rounded-lg flex flex-row text-center shadow-sm hover:shadow-md rounded-lg relative group"
+                >
+                  <div id="logo" class="p-4 flex flex-col min-w-56">
+                    <div class="flex h-full">
+                      <div class="flex w-1/3 flex-col pr-2">
+                        <div
+                          class="flex bg-bp-base-primary bg-opacity-10 rounded-lg w-full h-full"
+                        >
+                          <div class="flex mx-auto">
+                            <div class="m-auto max-w-12 lg:max-w-16">
+                              <img
+                                src="/images/management-dashboard/logo.svg"
+                                alt="logo"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col items-start md:pl-2 w-2/3">
+                        <div
+                          class="text-left text-bp-text-icons-main font-bold text-sm md:text-base"
+                        >
+                          Logo
+                        </div>
+                        <!----><!---->
+                        <div
+                          class="text-left text-2xs md:text-base leading-4 md:leading-5 pb-3 pt-0.5 md:pb-8"
+                        >
+                          Easily design &amp; download your own logo to
+                          establish your brand and wow your clients.
+                        </div>
+                        <div
+                          class="hidden lg:flex justify-between items-center w-full mt-auto"
+                        >
+                          <div class="w-2/3">
+                            <button
+                              class="flex-center h-max w-full size-m"
+                              type="button"
+                            >
+                              <!---->
+                              Get started
+                              <!---->
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex lg:hidden gap-1 justify-between items-center mt-auto ml-auto w-full md:w-50 lg:w-full pt-2"
+                    >
+                      <div class="mr-1">
+                        <button
+                          class="tailor-base-btn tailor-secondary-btn flex-center h-max w-max"
+                          type="button"
+                        >
+                          <!---->
+                          Get started
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-slate-50 rounded-lg flex flex-row text-center shadow-sm hover:shadow-md rounded-lg relative group"
+                >
+                  <div
+                    id="domain"
+                    class="business_guide_task_content p-4 flex flex-col min-w-56"
+                  >
+                    <div class="flex h-full">
+                      <div class="flex w-1/3 flex-col pr-2">
+                        <div
+                          class="flex bg-bp-base-primary bg-opacity-10 rounded-lg w-full h-full"
+                        >
+                          <div class="flex mx-auto">
+                            <div class="m-auto max-w-12 lg:max-w-16">
+                              <img
+                                src="/images/management-dashboard/domain.svg"
+                                alt="domain"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col items-start md:pl-2 w-2/3">
+                        <div
+                          class="text-left text-bp-text-icons-main font-bold text-sm md:text-base"
+                        >
+                          Domain
+                        </div>
+                        <!----><!---->
+                        <div
+                          class="text-left text-2xs md:text-base leading-4 md:leading-5 pb-3 pt-0.5 md:pb-8"
+                        >
+                          Ensure your customers can easily find you online by
+                          securing your domain name.
+                        </div>
+                        <div
+                          class="hidden lg:flex justify-between items-center w-full mt-auto"
+                        >
+                          <div class="w-2/3">
+                            <button
+                              class="flex-center h-max w-full size-m"
+                              type="button"
+                            >
+                              <!---->
+                              Get started
+                              <!---->
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex lg:hidden gap-1 justify-between items-center mt-auto ml-auto w-full md:w-50 lg:w-full pt-2"
+                    >
+                      <div class="mr-1">
+                        <button
+                          class="flex-center h-max w-max size-m"
+                          type="button"
+                        >
+                          <!---->
+                          Get started
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-slate-50 rounded-lg flex flex-row text-center shadow-sm hover:shadow-md rounded-lg relative group"
+                >
+                  <div class="p-4 flex flex-col min-w-56">
+                    <div class="flex h-full">
+                      <div class="flex w-1/3 flex-col pr-2">
+                        <div
+                          class="flex bg-bp-base-primary bg-opacity-10 rounded-lg w-full h-full"
+                        >
+                          <div class="flex mx-auto">
+                            <div class="m-auto max-w-12 lg:max-w-16">
+                              <img
+                                src="/images/management-dashboard/llc.svg"
+                                alt="llc"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col items-start md:pl-2 w-2/3">
+                        <div
+                          class="text-left text-bp-text-icons-main font-bold text-sm md:text-base"
+                        >
+                          LLC
+                        </div>
+                        <!----><!---->
+                        <div
+                          class="text-left text-bp-text-icons-subdued text-2xs md:text-base leading-4 md:leading-5 pb-3 pt-0.5 md:pb-8"
+                        >
+                          Protect your personal assets by easily forming your
+                          business as an LLC!
+                        </div>
+                        <div
+                          class="hidden lg:flex justify-between items-center w-full mt-auto"
+                        >
+                          <div class="flex items-center relative w-1/3">
+                            <div class="absolute invisible group-hover:visible">
+                              <button
+                                data-testing-id="management-dashboard-business-guidance-hide-task"
+                                class="tailor-base-btn tailor-link-btn flex-center h-max w-max size-l color link-underline"
+                                type="button"
+                              >
+                                <!---->
+                                Hide
+                                <!---->
+                              </button>
+                            </div>
+                          </div>
+                          <div class="w-2/3">
+                            <button
+                              data-testing-id="management-dashboard-business-guidance-start-task"
+                              class="tailor-base-btn tailor-secondary-btn flex-center h-max w-full size-m"
+                              type="button"
+                            >
+                              <!---->
+                              Get started
+                              <!---->
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex lg:hidden gap-1 justify-between items-center mt-auto ml-auto w-full md:w-50 lg:w-full pt-2"
+                    >
+                      <div class="flex items-center mx-auto">
+                        <button
+                          data-testing-id="management-dashboard-business-guidance-hide-task"
+                          class="tailor-base-btn tailor-link-btn flex-center h-max w-max size-l color"
+                          type="button"
+                        >
+                          <!---->
+                          Hide
+                          <!---->
+                        </button>
+                      </div>
+                      <div class="mr-1">
+                        <button
+                          data-testing-id="management-dashboard-business-guidance-start-task"
+                          class="tailor-base-btn tailor-secondary-btn flex-center h-max w-max size-m"
+                          type="button"
+                        >
+                          <!---->
+                          Get started
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-slate-50 rounded-lg flex flex-row text-center shadow-sm hover:shadow-md rounded-lg relative group"
+                >
+                  <div id="create_website" class="p-4 flex flex-col min-w-56">
+                    <div class="flex h-full">
+                      <div class="flex w-1/3 flex-col pr-2">
+                        <div
+                          class="flex bg-bp-base-primary bg-opacity-10 rounded-lg w-full h-full"
+                        >
+                          <div class="flex mx-auto">
+                            <div class="m-auto max-w-12 lg:max-w-16">
+                              <img
+                                src="/images/management-dashboard/create_website.svg"
+                                alt="create_website"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col items-start md:pl-2 w-2/3">
+                        <div
+                          class="text-left text-bp-text-icons-main font-bold text-sm md:text-base"
+                        >
+                          Website
+                        </div>
+                        <!----><!---->
+                        <div
+                          class="text-left text-bp-text-icons-subdued text-2xs md:text-base leading-4 md:leading-5 pb-3 pt-0.5 md:pb-8"
+                        >
+                          Amaze your future customers with a stunning website
+                          you can build in a few simple steps.
+                        </div>
+                        <div
+                          class="hidden lg:flex justify-between items-center w-full mt-auto"
+                        >
+                          <div class="w-2/3">
+                            <button
+                              data-testing-id="management-dashboard-business-guidance-start-task"
+                              class="tailor-base-btn tailor-secondary-btn flex-center h-max w-full size-m"
+                              type="button"
+                            >
+                              <!---->
+                              Get started
+                              <!---->
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex lg:hidden gap-1 justify-between items-center mt-auto ml-auto w-full md:w-50 lg:w-full pt-2"
+                    >
+                      <div class="mr-1">
+                        <button
+                          data-testing-id="management-dashboard-business-guidance-start-task"
+                          class="tailor-base-btn tailor-secondary-btn flex-center h-max w-max size-m"
+                          type="button"
+                        >
+                          <!---->
+                          Get started
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-slate-50 rounded-lg flex flex-row text-center shadow-sm hover:shadow-md rounded-lg relative group"
+                >
+                  <div
+                    id="business_legal_documents"
+                    class="business_guide_task_content p-4 flex flex-col min-w-56"
+                  >
+                    <div class="flex h-full">
+                      <div class="flex w-1/3 flex-col pr-2">
+                        <div
+                          class="flex bg-bp-base-primary bg-opacity-10 rounded-lg w-full h-full"
+                        >
+                          <div class="flex mx-auto">
+                            <div class="m-auto max-w-12 lg:max-w-16">
+                              <img
+                                src="/images/management-dashboard/business_legal_documents.svg"
+                                alt="business_legal_documents"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col items-start md:pl-2 w-2/3">
+                        <div
+                          class="text-left text-bp-text-icons-main font-bold text-sm md:text-base"
+                        >
+                          Legal documents
+                        </div>
+                        <!----><!---->
+                        <div
+                          class="text-left text-bp-text-icons-subdued text-2xs md:text-base leading-4 md:leading-5 pb-3 pt-0.5 md:pb-8"
+                        >
+                          Get access to attorney-written business documents
+                          &amp; cut down on your legal costs.
+                        </div>
+                        <div
+                          class="hidden lg:flex justify-between items-center w-full mt-auto"
+                        >
+                          <div class="w-2/3">
+                            <button
+                              data-testing-id="management-dashboard-business-guidance-start-task"
+                              class="tailor-base-btn tailor-secondary-btn flex-center h-max w-full size-m"
+                              type="button"
+                            >
+                              <!---->
+                              Get started
+                              <!---->
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex lg:hidden gap-1 justify-between items-center mt-auto ml-auto w-full md:w-50 lg:w-full pt-2"
+                    >
+                      <div class="mr-1">
+                        <button
+                          data-testing-id="management-dashboard-business-guidance-start-task"
+                          class="tailor-base-btn tailor-secondary-btn flex-center h-max w-max size-m"
+                          type="button"
+                        >
+                          <!---->
+                          Get started
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-slate-50 rounded-lg flex flex-row text-center shadow-sm hover:shadow-md rounded-lg relative group"
+                >
+                  <div
+                    id="business_cards"
+                    class="business_guide_task_content p-4 flex flex-col min-w-56"
+                  >
+                    <div class="flex h-full">
+                      <div class="flex w-1/3 flex-col pr-2">
+                        <div
+                          class="flex bg-bp-base-primary bg-opacity-10 rounded-lg w-full h-full"
+                        >
+                          <div class="flex mx-auto">
+                            <div class="m-auto max-w-12 lg:max-w-16">
+                              <img
+                                src="/images/management-dashboard/business_cards.svg"
+                                alt="business_cards"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col items-start md:pl-2 w-2/3">
+                        <div
+                          class="text-left text-bp-text-icons-main font-bold text-sm md:text-base"
+                        >
+                          Business cards
+                        </div>
+                        <!----><!---->
+                        <div
+                          class="text-left text-bp-text-icons-subdued text-2xs md:text-base leading-4 md:leading-5 pb-3 pt-0.5 md:pb-8"
+                        >
+                          Introduce yourself to new customers like a pro with a
+                          custom-made business card.
+                        </div>
+                        <div
+                          class="hidden lg:flex justify-between items-center w-full mt-auto"
+                        >
+                          <div class="w-2/3">
+                            <button class="h-max w-full" type="button">
+                              <!---->
+                              Get started
+                              <!---->
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex lg:hidden gap-1 justify-between items-center mt-auto ml-auto w-full md:w-50 lg:w-full pt-2"
+                    >
+                      <div class="mr-1">
+                        <button
+                          class="flex-center h-max w-max size-m"
+                          type="button"
+                        >
+                          <!---->
+                          Get started
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-4 pb-12">
+              <div>
+                <span class="text-xl font-bold"> My purchases </span>
+              </div>
+
+              <div class="md:relative mt-4 flex flex-row">
+                <div
+                  class="md:w-1/2 bg-slate-50 bg-opacity-50 md:bg-opacity-100 rounded-lg md:rounded-r-none"
+                >
+                  <img
+                    src="https://studio.tailorbrands.com/images/management-dashboard/purchases/background_empty.svg"
+                    alt="Empty"
+                    class="w-full h-auto hidden md:block"
+                  />
+                  <div
+                    class="md:absolute inset-0 flex items-center justify-center"
+                  >
+                    <div class="flex gap-3 p-6 md:p-0">
+                      <img
+                        src="https://studio.tailorbrands.com/images/management-dashboard/purchases/person_empty.svg"
+                        alt="Empty"
+                        class="md:w-1/4 h-auto"
+                      />
+                      <div
+                        class="my-auto text-bp-text-icons-subdued text-sm md:text-base md:max-w-80"
+                      >
+                        Easily track and operate everything you own for your
+                        business.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="hidden md:flex w-1/2 bg-slate-50 bg-opacity-50 md:bg-opacity-100 rounded-r-lg"
+                ></div>
+              </div>
+            </div>
+
+            <div class="px-4"></div>
+          </div>
         </div>
         <!-- dashboard end -->
       </div>
