@@ -9,3 +9,8 @@
   transform: translateX(0);
   display: visible;
 }
+@media (min-width: 1024px) {
+    .drawer {
+      display: none;
+    }
+  }
