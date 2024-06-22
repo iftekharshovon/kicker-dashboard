@@ -483,6 +483,111 @@
               <span class="text-4xl font-bold"> Welcome home, Kicker </span>
               <div class="border-t border-gray-300 pt-2 pb-6 mt-2"></div>
 
+              <div>
+                <div id="steps">
+                  <div class="step" data-stepnum="0" data-desc="Fill Complaint">
+                    1
+                  </div>
+                  <div
+                    class="step"
+                    data-stepnum="1"
+                    data-desc="Create Password"
+                  >
+                    2
+                  </div>
+                  <div class="step" data-stepnum="2" data-desc="Complaint Code">
+                    3
+                  </div>
+                  <div class="step" data-stepnum="3" data-desc="Complaint Code">
+                    4
+                  </div>
+                </div>
+
+                <form id="regForm">
+                  <!-- One "tab" for each step in the form: -->
+                  <div class="tab">
+                    <div class="single-block">
+                      <h4>About this channel</h4>
+                      <p>
+                        You can submit a report securely through this form.
+                        Information will be encrypted to ensure it is sent with
+                        the highest standards of privacy and security. Only the
+                        person designated by the company will be able to see it.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tab">
+                    <div class="inputs-group">
+                      <div>
+                        <label for="fname" class="form-label">Password</label>
+                        <input
+                          type="password"
+                          name="fname"
+                          id="fname"
+                          class="form-input"
+                          required
+                        />
+                      </div>
+                      <div class="sm-mt-40">
+                        <label for="lname" class="form-label"
+                          >Repeat Password</label
+                        >
+                        <input
+                          type="password"
+                          name="lname"
+                          id="lname"
+                          class="form-input"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab">
+                    <div class="single-block">
+                      <h4>Get the complaint code</h4>
+                      <p>
+                        We have received your complaint, and we will begin
+                        processing it within 7 days. You can expect the
+                        resolution of your complaint within a period of 3 months
+                        from the moment we begin processing it.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <div class="single-block">
+                      <h4>Get the complaint code</h4>
+                      <p>
+                        We have received your complaint, and we will begin
+                        processing it within 7 days. You can expect the
+                        resolution of your complaint within a period of 3 months
+                        from the moment we begin processing it.
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="footer_button">
+                      <button
+                        class="next positiveOutlineButton"
+                        type="button"
+                        id="prevBtn"
+                        onclick="nextPrev(-1)"
+                      >
+                        Previous
+                      </button>
+                      <button
+                        class="prev positiveOutlineButton"
+                        type="button"
+                        id="nextBtn"
+                        onclick="nextPrev(1)"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
               <div class="flex justify-between md:justify-start items-center">
                 <div class="text-xl font-bold mr-4">My updates</div>
                 <a class="cursor-pointer transition-all duration-200">
@@ -536,11 +641,7 @@
                     role="button"
                     class="h-20 flex md:hidden items-center justify-between p-8 pb-0 md:p-0"
                   >
-                   
-                    <div
-                      class="font-gazpacho text-xl font-bold mr-4"
-                     
-                    >
+                    <div class="font-gazpacho text-xl font-bold mr-4">
                       Updates
                     </div>
                     <div></div>
@@ -552,8 +653,6 @@
                   >
                     <div class="flex items-center flex-wrap">
                       <div class="flex">
-                        
-
                         <div class="font-bold mx-2 text-bp-base-negative">
                           ATTENTION - Reporting under the 2024 FinCEN regulation
                           is required!
@@ -574,7 +673,6 @@
                       >
                         File my BOI report
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -582,11 +680,7 @@
             </div>
 
             <div class="cp-business-guidance-container md:pr-4">
-              <span
-                class="text-xl font-bold pl-4"
-              >
-                My recommendations
-              </span>
+              <span class="text-xl font-bold pl-4"> My recommendations </span>
               <!---->
               <div
                 class="flex overflow-y-scroll md:overflow-y-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 py-4 pl-4 business-guide-task-container"
