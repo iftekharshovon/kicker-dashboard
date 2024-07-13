@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .step-content {
+        display: none;
+      }
+      .step-content.active {
+        display: block;
+      }
+      .step.completed .step-number {
+        background-color: #34d399; /* Green */
+        color: white;
+      }
+      .step.active .step-number {
+        background-color: #f87171; /* Red */
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="text-gray-900">
+    <div class="flex h-screen">
+      <div class="flex-1 p-8 bg-gray-200">
+        <div class="flex flex-col items-center justify-center h-max">
+          <h1 class="text-2xl font-bold mb-8">
+            Start your US company in minutes.
+          </h1>
+          <p class="mb-8">
+            Answer a few questions to help us form your new company.
+          </p>
+          <ol class="space-y-4">
+            <li>
+              <div
+                class="step flex items-center cursor-pointer active"
+                data-step="1"
+              >
+                <div
+                  class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 mr-4"
+                >
+                  1
+                </div>
+                <div>
+                  <h3 class="font-medium">Company Type</h3>
+                  <p class="text-sm text-gray-400">
+                    Choose your business entity. Unsure? We'll help you choose.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="step flex items-center cursor-pointer" data-step="2">
+                <div
+                  class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 mr-4"
+                >
+                  2
+                </div>
+                <div>
+                  <h3 class="font-medium">Company Name</h3>
+                  <p class="text-sm text-gray-400">
+                    Give a name to your company.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="step flex items-center cursor-pointer" data-step="3">
+                <div
+                  class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 mr-4"
+                >
+                  3
+                </div>
+                <div>
+                  <h3 class="font-medium">Registration State</h3>
+                  <p class="text-sm text-gray-400">
+                    Choose the state to register your company.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="step flex items-center cursor-pointer" data-step="4">
+                <div
+                  class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 mr-4"
+                >
+                  4
+                </div>
+                <div>
+                  <h3 class="font-medium">Review and pay</h3>
+                  <p class="text-sm text-gray-400">
+                    Review your information and proceed to payment.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="flex-1 p-8 bg-gray-100">
+        <div id="step-1" class="step-content active">
+          <h2 class="text-3xl font-bold mb-4">Company Type</h2>
+          <div class="space-y-4">
+            <div class="bg-gray-300 p-4 rounded-lg cursor-pointer">
+              <h3 class="font-medium">Help me choose</h3>
+              <p class="text-sm text-gray-400">
+                Take our LLC vs. C Corp quiz for a personalized recommendation.
+              </p>
+            </div>
+            <div class="bg-gray-300 p-4 rounded-lg cursor-pointer">
+              <h3 class="font-medium">LLC</h3>
+              <p class="text-sm text-gray-400">
+                Minimal fees + unmatched privacy and flexibility.
+              </p>
+            </div>
+            <div class="bg-gray-300 p-4 rounded-lg cursor-pointer">
+              <h3 class="font-medium">C-corporation</h3>
+              <p class="text-sm text-gray-400">
+                Ideal for startups that plan to seek outside funding.
+              </p>
+            </div>
+          </div>
+          <button
+            class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg"
+            onclick="nextStep(2)"
+          >
+            Continue
+          </button>
+        </div>
+        <div id="step-2" class="step-content">
+          <h2 class="text-3xl font-bold mb-4">Company Name</h2>
+          <p class="text-gray-400">Choose a name to register your company.</p>
+
+          <button
+            class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg"
+            onclick="nextStep(3)"
+          >
+            Continue
+          </button>
+        </div>
+        <div id="step-3" class="step-content">
+          <h2 class="text-3xl font-bold mb-4">Registration State</h2>
+          <p class="text-gray-400">
+            Choose the state to register your company.
+          </p>
+          <select class="mt-4 p-2 bg-gray-300 text-white rounded-lg w-full">
+            <option value="california">California</option>
+            <option value="delaware">Delaware</option>
+            <option value="nevada">Nevada</option>
+          </select>
+          <button
+            class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg"
+            onclick="nextStep(4)"
+          >
+            Continue
+          </button>
+        </div>
+        <div id="step-4" class="step-content">
+          <h2 class="text-3xl font-bold mb-4">Review and Pay</h2>
+          <p class="text-gray-400">
+            Review your information and proceed to payment.
+          </p>
+          <button class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg">
+            Pay Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const steps = document.querySelectorAll(".step");
+      const stepContents = document.querySelectorAll(".step-content");
+
+      steps.forEach((step) => {
+        step.addEventListener("click", () => {
+          const stepNumber = step.getAttribute("data-step");
+          setActiveStep(stepNumber);
+        });
+      });
+
+      function nextStep(stepNumber) {
+        setActiveStep(stepNumber);
+      }
+
+      function setActiveStep(stepNumber) {
+        steps.forEach((s) => s.classList.remove("active", "completed"));
+        stepContents.forEach((content) => content.classList.remove("active"));
+
+        for (let i = 1; i < stepNumber; i++) {
+          document
+            .querySelector(`.step[data-step="${i}"]`)
+            .classList.add("completed");
+        }
+
+        document
+          .querySelector(`.step[data-step="${stepNumber}"]`)
+          .classList.add("active");
+        document.querySelector(`#step-${stepNumber}`).classList.add("active");
+      }
+
+      // Set the first step as active when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        setActiveStep(1);
+      });
+    </script>
+  </body>
+</html>
