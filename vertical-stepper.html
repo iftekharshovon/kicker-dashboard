@@ -12,11 +12,11 @@
         display: block;
       }
       .step.completed .step-number {
-        background-color: #34d399; /* Green */
+        background-color: #34d399;
         color: white;
       }
       .step.active .step-number {
-        background-color: #f87171; /* Red */
+        background-color: #f87171;
         color: white;
       }
     </style>
@@ -131,7 +131,13 @@
         <div id="step-2" class="step-content">
           <h2 class="text-3xl font-bold mb-4">Company Name</h2>
           <p class="text-gray-400">Choose a name to register your company.</p>
-
+          <input
+            type="text"
+            name=""
+            placeholder="Company Name"
+            id=""
+            class="block"
+          />
           <button
             class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg"
             onclick="nextStep(3)"
@@ -161,9 +167,12 @@
           <p class="text-gray-400">
             Review your information and proceed to payment.
           </p>
-          <button class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg">
+          <a
+            href="dashboard.html"
+            class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg inline-block"
+          >
             Pay Now
-          </button>
+          </a>
         </div>
       </div>
     </div>
