@@ -81,3 +81,52 @@ function toggleAccordion(index) {
     icon.innerHTML = downSVG;
   }
 }
+
+const steps = 3;
+let currentStep = 1;
+
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+const updateStepper = () => {
+  // Update step indicators
+  for (let i = 1; i <= steps; i++) {
+    const stepIndicator = document.getElementById(`step-${i}`);
+    const stepContent = document.getElementById(`content-${i}`);
+
+    if (i === currentStep) {
+      stepIndicator.classList.remove("bg-gray-500");
+      stepIndicator.classList.add("bg-purple-600");
+      stepContent.classList.remove("hidden");
+    } else {
+      stepIndicator.classList.remove("bg-purple-600");
+      stepIndicator.classList.add("bg-gray-500");
+      stepContent.classList.add("hidden");
+    }
+  }
+
+  // Enable or disable buttons based on step
+  prevBtn.disabled = currentStep === 1;
+  nextBtn.textContent = currentStep === steps ? "Finish" : "Continue";
+};
+
+// Button event listeners
+prevBtn.addEventListener("click", () => {
+  if (currentStep > 1) {
+    currentStep--;
+    updateStepper();
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (currentStep < steps) {
+    currentStep++;
+  } else {
+    alert("Stepper completed!");
+  }
+  updateStepper();
+});
+
+// Initialize the stepper
+updateStepper();
+
