@@ -11,7 +11,7 @@
 
   <body class="bg-gray-100 text-slate-900">
     <div class="flex w-screen h-screen text-gray-700 relative">
-            <div
+      <div
         id="drawer"
         class="drawer drawer-hidden absolute h-screen z-50 w-full flex"
       >
@@ -422,26 +422,67 @@
               </svg>
               Dashboard
             </a>
-            <a
-              class="flex gap-3 items-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded hover:bg-gray-300"
-              href="company.html"
-            >
-              <svg
-                class="w-5 h-5"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <div class="hover:bg-gray-300 rounded">
+              <button
+                onclick="toggleAccordion(1)"
+                class="w-full flex justify-between items-center ps-2 py-2 text-slate-800 hover:bg-gray-300"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
-              Company
-            </a>
+                <a
+                  href="company.html"
+                  class="flex items-center gap-2 text-sm font-medium"
+                  ><svg
+                    class="w-5 h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    /></svg
+                  >Company</a
+                >
+                <span
+                  id="icon-1"
+                  class="text-slate-800 transition-transform duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                id="content-1"
+                class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white px-2"
+              >
+                <div class="py-2 text-sm text-slate-500">
+                  <a
+                    class="flex gap-3 items-center flex-shrink-0 h-8 px-2 text-sm font-medium rounded hover:bg-gray-300"
+                    href="company.html"
+                  >
+                    Details
+                  </a>
+                  <a
+                    class="flex gap-3 items-center flex-shrink-0 h-8 px-2 text-sm font-medium rounded hover:bg-gray-300"
+                    href="document.html"
+                  >
+                    Document
+                  </a>
+                </div>
+              </div>
+            </div>
             <a
               class="flex gap-3 items-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded hover:bg-gray-300"
               href="billing.html"
@@ -689,7 +730,7 @@
                 />
               </svg>
             </button>
-            <h1 class="text-xl font-bold">Boi Report</h1>
+            <h1 class="text-xl font-bold">Details</h1>
           </div>
           <div class="flex items-center">
             <a
@@ -735,7 +776,94 @@
         </header>
         <main class="flex-grow p-6 bg-gray-100 overflow-y-auto">
           <div class="container mx-auto">
-            <!-- Your main content goes here -->
+            <div class="text-slate-900 p-6">
+              <h2 class="text-xl font-bold mb-4">Details</h2>
+              <p class="text-sm mb-6">Personal and company details.</p>
+
+              <div class="mb-4">
+                <label class="text-base font-semibold">Company Name</label>
+                <p class="mt-1">Cannki Inc.</p>
+              </div>
+
+              <div class="mb-4 flex items-center">
+                <label class="text-base font-semibold mr-4">Company Logo</label>
+                <div class="flex items-center">
+                  <div
+                    class="w-8 h-8 bg-orange-600 flex items-center justify-center text-white font-bold rounded-full"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <button
+                    class="ml-4 bg-orange-600 text-white px-3 py-1 rounded"
+                  >
+                    Upload Logo
+                  </button>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label class="text-base font-semibold">State</label>
+                <p class="mt-1">Delaware</p>
+              </div>
+
+              <div class="mb-4">
+                <label class="text-base font-semibold">Industry</label>
+                <p class="mt-1">Other</p>
+              </div>
+
+              <div class="mb-4">
+                <label class="text-base font-semibold">Website</label>
+                <div class="flex mt-1">
+                  <input
+                    type="text"
+                    class="border border-gray-600 text-white rounded px-3 py-1 w-full"
+                    value=""
+                  />
+                  <button
+                    class="ml-2 bg-orange-600 text-white px-3 py-1 rounded"
+                  >
+                    Change
+                  </button>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label class="text-base font-semibold">LinkedIn</label>
+                <div class="flex mt-1">
+                  <input
+                    type="text"
+                    class="border border-gray-600 text-white rounded px-3 py-1 w-full"
+                    value=""
+                  />
+                  <button
+                    class="ml-2 bg-orange-600 text-white px-3 py-1 rounded"
+                  >
+                    Change
+                  </button>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label class="text-base font-semibold">Shares</label>
+                <p class="mt-1">Total number of authorized shares</p>
+                <p class="mt-1">10000000</p>
+                <label class="mt-2 text-base font-semibold">Par value</label>
+                <p class="mt-1">0.00001</p>
+              </div>
+            </div>
           </div>
         </main>
       </div>
@@ -764,34 +892,34 @@
       <span class="text-sm ml-1 leading-none">@lofiui</span>
     </a>
     <script>
-  function toggleAccordion(index) {
-    const content = document.getElementById(`content-${index}`);
-    const icon = document.getElementById(`icon-${index}`);
- 
-    // SVG for Down icon
-    const downSVG = `
+      function toggleAccordion(index) {
+        const content = document.getElementById(`content-${index}`);
+        const icon = document.getElementById(`icon-${index}`);
+
+        // SVG for Down icon
+        const downSVG = `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
         <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
       </svg>
     `;
- 
-    // SVG for Up icon
-    const upSVG = `
+
+        // SVG for Up icon
+        const upSVG = `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
         <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
       </svg>
     `;
- 
-    // Toggle the content's max-height for smooth opening and closing
-    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-      content.style.maxHeight = '0';
-      icon.innerHTML = upSVG;
-    } else {
-      content.style.maxHeight = content.scrollHeight + 'px';
-      icon.innerHTML = downSVG;
-    }
-  }
-</script>
+
+        // Toggle the content's max-height for smooth opening and closing
+        if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+          content.style.maxHeight = "0";
+          icon.innerHTML = upSVG;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          icon.innerHTML = downSVG;
+        }
+      }
+    </script>
 
     <script src="js/script.js" />
   </body>
