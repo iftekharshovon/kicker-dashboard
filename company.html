@@ -102,66 +102,66 @@
                 Dashboard
               </a>
               <div class="hover:bg-gray-300 rounded">
-              <button
-                onclick="toggleAccordion(2)"
-                class="w-full flex justify-between items-center ps-2 py-2 text-slate-800 hover:bg-gray-300"
-              >
-                <a
-                  href="company.html"
-                  class="flex items-center gap-2 text-sm font-medium"
-                  ><svg
-                    class="w-5 h-5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                    /></svg
-                  >Company</a
+                <button
+                  onclick="toggleAccordion(2)"
+                  class="w-full flex justify-between items-center ps-2 py-2 text-slate-800 hover:bg-gray-300"
                 >
-                <span
-                  id="icon-2"
-                  class="text-slate-800 transition-transform duration-300"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    class="w-4 h-4"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </button>
-              <div
-                id="content-2"
-                class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white px-2"
-              >
-                <div class="py-2 text-sm text-slate-500">
                   <a
-                    class="flex gap-3 items-center flex-shrink-0 h-8 px-2 text-sm font-medium rounded hover:bg-gray-300"
                     href="company.html"
+                    class="flex items-center gap-2 text-sm font-medium"
+                    ><svg
+                      class="w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      /></svg
+                    >Company</a
                   >
-                    Details
-                  </a>
-                  <a
-                    class="flex gap-3 items-center flex-shrink-0 h-8 px-2 text-sm font-medium rounded hover:bg-gray-300"
-                    href="document.html"
+                  <span
+                    id="icon-2"
+                    class="text-slate-800 transition-transform duration-300"
                   >
-                    Document
-                  </a>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  id="content-2"
+                  class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white px-2"
+                >
+                  <div class="py-2 text-sm text-slate-500">
+                    <a
+                      class="flex gap-3 items-center flex-shrink-0 h-8 px-2 text-sm font-medium rounded hover:bg-gray-300"
+                      href="company.html"
+                    >
+                      Details
+                    </a>
+                    <a
+                      class="flex gap-3 items-center flex-shrink-0 h-8 px-2 text-sm font-medium rounded hover:bg-gray-300"
+                      href="document.html"
+                    >
+                      Document
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
               <a
                 class="flex gap-3 items-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded hover:bg-gray-300"
                 href="billing.html"
@@ -819,92 +819,154 @@
         </header>
         <main class="flex-grow p-6 bg-gray-100 overflow-y-auto">
           <div class="container mx-auto">
-            <div class="text-slate-900 p-6">
-              <h2 class="text-xl font-bold mb-4">Details</h2>
-              <p class="text-sm mb-6">Personal and company details.</p>
+            <div class="flex flex-col h-full w-full gap-2">
+              <h3 class="text-xl font-semibold">Details</h3>
+              <p class="text-sm text-gray-500">Personal and company details.</p>
 
-              <div class="mb-4">
-                <label class="text-base font-semibold">Company Name</label>
-                <p class="mt-1">Cannki Inc.</p>
-              </div>
+              <div class="flex flex-col gap-2 mt-6">
+                <ul class="divide-y divide-gray-300">
+                  <!-- Company Name -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-medium text-gray-700">Company name</p>
+                    <p class="flex-1 text-gray-500">Cickker</p>
+                  </li>
 
-              <div class="mb-4 flex items-center">
-                <label class="text-base font-semibold mr-4">Company Logo</label>
-                <div class="flex items-center">
-                  <div
-                    class="w-8 h-8 bg-orange-600 flex items-center justify-center text-white font-bold rounded-full"
-                  >
-                    <svg
-                      class="w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  <!-- Company Logo -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-medium text-gray-700">Company logo</p>
+                    <div class="flex-1 flex items-center gap-4">
+                      <div
+                        class="bg-gray-100 rounded-full w-6 h-6 flex items-center justify-center"
+                      >
+                        <img
+                          src="https://via.placeholder.com/150"
+                          class="w-full h-full"
+                        />
+                      </div>
+                      <button
+                        class="bg-slate-700 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      >
+                        Upload Logo
+                      </button>
+                    </div>
+                  </li>
+
+                  <!-- State -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-medium text-gray-700">State</p>
+                    <p class="flex-1 text-gray-500">Wyoming</p>
+                  </li>
+
+                  <!-- Industry -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-medium text-gray-700">Industry</p>
+                    <p class="flex-1 text-gray-500"><!-- Industry here --></p>
+                  </li>
+
+                  <!-- Website -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-medium text-gray-700">Website</p>
+                    <div class="flex-1 flex items-center gap-4">
+                      <input
+                        type="text"
+                        disabled
+                        class="bg-gray-100 px-4 text-sm py-1 rounded text-gray-500 w-48 border-gray-300 border"
+                        placeholder="Website URL"
                       />
-                    </svg>
-                  </div>
-                  <button
-                    class="ml-4 bg-orange-600 text-white px-3 py-1 rounded"
-                  >
-                    Upload Logo
-                  </button>
-                </div>
-              </div>
+                      <button
+                        class="bg-slate-700 text-white px-4 py-1 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      >
+                        Change
+                      </button>
+                    </div>
+                  </li>
 
-              <div class="mb-4">
-                <label class="text-base font-semibold">State</label>
-                <p class="mt-1">Delaware</p>
-              </div>
+                  <!-- LinkedIn -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-medium text-gray-700">LinkedIn</p>
+                    <div class="flex-1 flex items-center gap-4">
+                      <input
+                        type="text"
+                        disabled
+                        class="bg-gray-100 px-4 text-sm py-1 rounded text-gray-500 w-48 border-gray-300 border"
+                        placeholder="LinkedIn URL"
+                      />
+                      <button
+                        class="bg-slate-700 text-white px-4 py-1 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      >
+                        Change
+                      </button>
+                    </div>
+                  </li>
 
-              <div class="mb-4">
-                <label class="text-base font-semibold">Industry</label>
-                <p class="mt-1">Other</p>
-              </div>
+                  <!-- Fiscal Year End -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-medium text-gray-700">
+                      Fiscal Year End
+                    </p>
+                    <p class="flex-1 text-gray-500">December 31</p>
+                  </li>
 
-              <div class="mb-4">
-                <label class="text-base font-semibold">Website</label>
-                <div class="flex mt-1">
-                  <input
-                    type="text"
-                    class="border border-gray-600 text-white rounded px-3 py-1 w-full"
-                    value=""
-                  />
-                  <button
-                    class="ml-2 bg-orange-600 text-white px-3 py-1 rounded"
-                  >
-                    Change
-                  </button>
-                </div>
-              </div>
+                  <!-- Responsible Party -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-semibold text-gray-700">
+                      Responsible Party
+                    </p>
+                    <div class="flex-1 pl-4 space-y-2">
+                      <div class="flex justify-between items-center">
+                        <p class="text-sm text-gray-600">Name</p>
+                        <p class="text-gray-500">Ali Inayat</p>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <p class="text-sm text-gray-600">
+                          Country of Residency
+                        </p>
+                        <p class="text-gray-500">Pakistan</p>
+                      </div>
+                    </div>
+                  </li>
 
-              <div class="mb-4">
-                <label class="text-base font-semibold">LinkedIn</label>
-                <div class="flex mt-1">
-                  <input
-                    type="text"
-                    class="border border-gray-600 text-white rounded px-3 py-1 w-full"
-                    value=""
-                  />
-                  <button
-                    class="ml-2 bg-orange-600 text-white px-3 py-1 rounded"
-                  >
-                    Change
-                  </button>
-                </div>
-              </div>
+                  <!-- Owners -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-semibold text-gray-700">Owners</p>
+                    <!-- Owners list -->
+                  </li>
 
-              <div class="mb-4">
-                <label class="text-base font-semibold">Shares</label>
-                <p class="mt-1">Total number of authorized shares</p>
-                <p class="mt-1">10000000</p>
-                <label class="mt-2 text-base font-semibold">Par value</label>
-                <p class="mt-1">0.00001</p>
+                  <!-- Parent Companies -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-semibold text-gray-700">
+                      Parent Companies
+                    </p>
+                    <!-- Parent companies list -->
+                  </li>
+
+                  <!-- Incorporator's Details -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-semibold text-gray-700">
+                      Incorporator's Details
+                    </p>
+                    <div class="flex-1 pl-4 space-y-2">
+                      <div class="flex justify-between items-center">
+                        <p class="text-sm text-gray-600">Applicant's Name</p>
+                        <p class="text-gray-500">Ali Inayat</p>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <p class="text-sm text-gray-600">
+                          Country of Residency
+                        </p>
+                        <p class="text-gray-500">Pakistan</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- Mailing Address -->
+                  <li class="flex justify-between items-start py-4">
+                    <p class="flex-1 font-semibold text-gray-700">
+                      Mailing Address
+                    </p>
+                    <!-- Mailing Address content -->
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
