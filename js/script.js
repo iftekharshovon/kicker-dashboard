@@ -95,12 +95,12 @@ const updateStepper = () => {
     const stepContent = document.getElementById(`content-${i}`);
 
     if (i === currentStep) {
-      stepIndicator.classList.remove("bg-gray-500");
+      stepIndicator.classList.remove("bg-slate-500");
       stepIndicator.classList.add("bg-purple-600");
       stepContent.classList.remove("hidden");
     } else {
       stepIndicator.classList.remove("bg-purple-600");
-      stepIndicator.classList.add("bg-gray-500");
+      stepIndicator.classList.add("bg-slate-500");
       stepContent.classList.add("hidden");
     }
   }
@@ -129,4 +129,3 @@ nextBtn.addEventListener("click", () => {
 
 // Initialize the stepper
 updateStepper();
-
