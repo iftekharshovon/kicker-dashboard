@@ -7,6 +7,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      .step-content {
+        display: none;
+      }
+      .step-content.active {
+        display: block;
+      }
+      .step {
+        background-color: #34d399;
+        color: white;
+      }
+      .step.active {
+        background-color: #f87171;
+        color: white;
+      }
+      .step.completed {
+        background-color: #34d399;
+      }
+    </style>
   </head>
 
   <body class="bg-slate-100 text-slate-900">
@@ -871,7 +890,124 @@
         </header>
         <main class="flex-grow p-6 bg-slate-100 overflow-y-auto">
           <div class="container mx-auto">
-            here goes content
+            <!-- Your main content goes here -->
+            <div class="h-screen flex items-center justify-center text-slate-100">
+              <div
+                class="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg"
+              >
+                <h2 class="text-3xl font-semibold text-center mb-6">
+                  Our plans
+                </h2>
+
+                <!-- Plan Table -->
+                <div class="overflow-x-auto">
+                  <table class="w-full table-auto text-left border-collapse">
+                    <thead>
+                      <tr class="text-sm text-gray-400">
+                        <th class="py-3 px-4"></th>
+                        <th class="py-3 px-4 text-center">Light</th>
+                        <th class="py-3 px-4 text-center">Autopilot</th>
+                        <th class="py-3 px-4 text-center">Payroll</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-t border-gray-700">
+                        <td class="py-3 px-4">Visual compliance dashboard</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                      </tr>
+                      <tr class="border-t border-gray-700">
+                        <td class="py-3 px-4">State compliance reminders</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                      </tr>
+                      <tr class="border-t border-gray-700">
+                        <td class="py-3 px-4">Registered agent services</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                      </tr>
+                      <tr class="border-t border-gray-700">
+                        <td class="py-3 px-4">Foreign qualification</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                      </tr>
+                      <tr class="border-t border-gray-700">
+                        <td class="py-3 px-4">State annual reports</td>
+                        <td class="py-3 px-4 text-center text-gray-400">🔒</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                      </tr>
+                      <tr class="border-t border-gray-700">
+                        <td class="py-3 px-4">
+                          Beneficial ownership information filings
+                        </td>
+                        <td class="py-3 px-4 text-center text-gray-400">🔒</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                      </tr>
+                      <tr class="border-t border-gray-700">
+                        <td class="py-3 px-4">State franchise tax filing</td>
+                        <td class="py-3 px-4 text-center text-gray-400">🔒</td>
+                        <td class="py-3 px-4 text-center text-gray-400">🔒</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                      </tr>
+                      <tr class="border-t border-gray-700">
+                        <td class="py-3 px-4">Payroll tax registration</td>
+                        <td class="py-3 px-4 text-center text-gray-400">🔒</td>
+                        <td class="py-3 px-4 text-center text-gray-400">🔒</td>
+                        <td class="py-3 px-4 text-center">✔</td>
+                      </tr>
+                      <tr class="border-t border-gray-700">
+                        <td class="py-3 px-4"></td>
+                        <td class="py-4 px-4 text-center text-lg font-semibold">
+                          $149/year
+                        </td>
+                        <td class="py-4 px-4 text-center text-lg font-semibold">
+                          $299/year
+                        </td>
+                        <td class="py-4 px-4 text-center text-lg font-semibold">
+                          $599/year
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-8 text-center space-y-4">
+                  <a href="/agent-stepper.html"
+                    class="border border-slate-900 text-white px-6 py-2 rounded-lg block w-full"
+                  >
+                    Start
+                  </a>
+                  <a
+                    href="/agent-onboard.html"
+                    class="bg-purple-600 text-white px-6 py-2 rounded-lg inline-flex items-center text-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-5 w-5 mr-2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                    Back
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Your main content goes here -->
           </div>
         </main>
       </div>

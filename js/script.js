@@ -82,50 +82,66 @@ function toggleAccordion(index) {
   }
 }
 
-const steps = 3;
+const steps = document.querySelectorAll(".step");
+const stepContents = document.querySelectorAll(".step-content");
+const nextButton = document.getElementById("next-btn");
+const prevButton = document.getElementById("prev-btn");
+const stepForm = document.getElementById("step-form");
 let currentStep = 1;
 
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
+// Function to set active step
+function setActiveStep(stepNumber) {
+  steps.forEach((s, index) => {
+    s.classList.toggle("active", index + 1 === stepNumber);
+    s.classList.toggle("completed", index + 1 < stepNumber);
+  });
 
-const updateStepper = () => {
-  // Update step indicators
-  for (let i = 1; i <= steps; i++) {
-    const stepIndicator = document.getElementById(`step-${i}`);
-    const stepContent = document.getElementById(`content-${i}`);
+  stepContents.forEach((content, index) => {
+    content.classList.toggle("active", index + 1 === stepNumber);
+  });
 
-    if (i === currentStep) {
-      stepIndicator.classList.remove("bg-slate-500");
-      stepIndicator.classList.add("bg-purple-600");
-      stepContent.classList.remove("hidden");
-    } else {
-      stepIndicator.classList.remove("bg-purple-600");
-      stepIndicator.classList.add("bg-slate-500");
-      stepContent.classList.add("hidden");
-    }
+  // Enable/disable buttons based on the step number
+  prevButton.disabled = stepNumber === 1;
+
+  // If it's the last step, change the "Continue" button to "Complete"
+  if (stepNumber === steps.length) {
+    nextButton.textContent = "Complete";
+  } else {
+    nextButton.textContent = "Continue";
   }
 
-  // Enable or disable buttons based on step
-  prevBtn.disabled = currentStep === 1;
-  nextBtn.textContent = currentStep === steps ? "Finish" : "Continue";
-};
+  // Update current step
+  currentStep = stepNumber;
+}
 
-// Button event listeners
-prevBtn.addEventListener("click", () => {
+// Next button functionality
+nextButton.addEventListener("click", () => {
+  if (currentStep < steps.length) {
+    currentStep++;
+    setActiveStep(currentStep);
+  } else {
+    // Submit the form when "Complete" is clicked
+    stepForm.submit();
+  }
+});
+
+// Previous button functionality
+prevButton.addEventListener("click", () => {
   if (currentStep > 1) {
     currentStep--;
-    updateStepper();
+    setActiveStep(currentStep);
   }
 });
 
-nextBtn.addEventListener("click", () => {
-  if (currentStep < steps) {
-    currentStep++;
-  } else {
-    alert("Stepper completed!");
-  }
-  updateStepper();
+// Add click event listeners to steps for direct navigation
+steps.forEach((step) => {
+  step.parentElement.addEventListener("click", () => {
+    const stepNumber = step.parentElement.getAttribute("data-step");
+    setActiveStep(parseInt(stepNumber));
+  });
 });
 
-// Initialize the stepper
-updateStepper();
+// Initialize the first step as active when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+  setActiveStep(currentStep);
+});
