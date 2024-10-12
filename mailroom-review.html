@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .step-content {
+        display: none;
+      }
+      .step-content.active {
+        display: block;
+      }
+      .step.completed .step-number {
+        background-color: #34d399;
+        color: white;
+      }
+      .step.active .step-number {
+        background-color: #f87171;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="text-slate-900">
+    <div class="flex h-screen">
+      <div class="flex-1 p-8 bg-slate-200">
+        <a href="agent-promo.html"> Back </a>
+        <div class="flex flex-col items-center justify-center h-max">
+          <h1 class="text-2xl font-bold mb-8">Automated legal compliance</h1>
+          <p class="mb-8">
+            Choose the best solution that fits your needs in order to continue.
+          </p>
+          <ol class="space-y-4">
+            <li>
+              <div class="step flex items-center cursor-pointer" data-step="1">
+                <div
+                  class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 mr-4"
+                >
+                  1
+                </div>
+                <div>
+                  <h3 class="font-medium">Review And Payment</h3>
+                  <p class="text-sm text-slate-400">
+                    See the states and the plans that fit your needs. Go to
+                    payment to active the service.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="step flex items-center cursor-pointer" data-step="2">
+                <div
+                  class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 mr-4"
+                >
+                  2
+                </div>
+                <div>
+                  <h3 class="font-medium">Activation</h3>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="flex-1 p-8 bg-slate-100">
+        <div id="step-1" class="step-content active">
+          <div
+            class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md text-white"
+          >
+            <!-- Header Section -->
+            <h1 class="text-center text-xl font-semibold mb-2">
+              Review & Payment
+            </h1>
+            <p class="text-center text-gray-400 mb-6">
+              You're almost done. 🎉 <br />Please confirm the plan that fits
+              your needs.
+            </p>
+
+            <!-- Plan Details -->
+            <div class="bg-gray-700 p-6 rounded-lg mb-6">
+              <div class="flex justify-between items-center mb-4">
+                <span>Texas • Basic</span>
+                <span class="text-gray-400">$25.00/month</span>
+                <a href="#" class="text-pink-500 text-sm">See options</a>
+              </div>
+              <ul class="text-sm text-gray-300 space-y-3">
+                <li class="flex items-center">
+                  <span class="text-green-400 mr-2">✔</span> Physical Address
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-400 mr-2">✔</span> Digital Mailroom
+                  Platform (24/7 instant access to your mail)
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-400 mr-2">✔</span> Envelope and
+                  Content Scans
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-400 mr-2">✔</span> Mail Forwarding
+                  (paid separately)
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-400 mr-2">✔</span> Free Secure
+                  Shredding
+                </li>
+              </ul>
+            </div>
+
+            <!-- Terms and Checkbox -->
+            <div class="flex items-center space-x-2 mb-6">
+              <input type="checkbox" class="form-checkbox text-purple-500" />
+              <span class="text-gray-400 text-sm">
+                I read and agree with the
+                <span class="text-red-500">Terms of Service</span> and
+                <span class="text-red-500">Privacy Policy</span>.
+              </span>
+            </div>
+
+            <!-- Payment Button -->
+            <div class="flex justify-center">
+              <button
+                class="bg-gradient-to-r from-purple-500 to-orange-500 text-white py-2 px-6 rounded hover:opacity-90"
+              >
+                Go to Payment
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="step-2" class="step-content">
+          <div
+            class="max-w-md w-full bg-gray-800 p-8 rounded-lg shadow-lg text-center"
+          >
+            <div
+              class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md text-white"
+            >
+              <!-- Header -->
+              <h1 class="text-center text-xl font-semibold mb-6">
+                Choose Mailroom address
+              </h1>
+
+              <!-- Address List -->
+              <div class="space-y-4 mb-6">
+                <label
+                  class="block bg-gray-700 py-3 px-4 rounded flex items-center space-x-2 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="address"
+                    class="form-radio text-purple-500"
+                  />
+                  <span
+                    >1021 E Lincolnway, Cheyenne, WY 82001, United States</span
+                  >
+                </label>
+                <label
+                  class="block bg-gray-700 py-3 px-4 rounded flex items-center space-x-2 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="address"
+                    class="form-radio text-purple-500"
+                  />
+                  <span
+                    >1007 N Orange St, Wilmington, DE 19801, United States</span
+                  >
+                </label>
+                <label
+                  class="block bg-gray-700 py-3 px-4 rounded flex items-center space-x-2 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="address"
+                    class="form-radio text-purple-500"
+                  />
+                  <span
+                    >701 Tillery Street #12, Austin, Texas, 78702 United
+                    States</span
+                  >
+                </label>
+              </div>
+
+              <!-- Terms Checkbox -->
+              <div class="flex items-center space-x-2 mb-6">
+                <input type="checkbox" class="form-checkbox text-purple-500" />
+                <span class="text-gray-400 text-sm">
+                  I read and agree with the
+                  <span class="text-red-500">Terms of Service</span> and
+                  <span class="text-red-500">Privacy Policy</span>.
+                </span>
+              </div>
+
+              <!-- Continue Button -->
+              <div class="flex justify-center">
+                <button
+                  class="bg-gradient-to-r from-purple-500 to-orange-500 text-white py-2 px-6 rounded hover:opacity-90"
+                >
+                  Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const steps = document.querySelectorAll(".step");
+      const stepContents = document.querySelectorAll(".step-content");
+
+      steps.forEach((step) => {
+        step.addEventListener("click", () => {
+          const stepNumber = step.getAttribute("data-step");
+          setActiveStep(stepNumber);
+        });
+      });
+
+      function nextStep(stepNumber) {
+        setActiveStep(stepNumber);
+      }
+
+      function setActiveStep(stepNumber) {
+        steps.forEach((s) => s.classList.remove("active", "completed"));
+        stepContents.forEach((content) => content.classList.remove("active"));
+
+        for (let i = 1; i < stepNumber; i++) {
+          document
+            .querySelector(`.step[data-step="${i}"]`)
+            .classList.add("completed");
+        }
+
+        document
+          .querySelector(`.step[data-step="${stepNumber}"]`)
+          .classList.add("active");
+        document.querySelector(`#step-${stepNumber}`).classList.add("active");
+      }
+
+      // Set the first step as active when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        setActiveStep(1);
+      });
+    </script>
+    <script>
+      const searchInput = document.getElementById("search-input");
+      const stateList = document.getElementById("state-list");
+      const checkboxes = stateList.querySelectorAll("label");
+
+      searchInput.addEventListener("input", function () {
+        const searchTerm = this.value.toLowerCase();
+        checkboxes.forEach(function (checkbox) {
+          const stateName = checkbox.textContent.trim().toLowerCase();
+          if (stateName.includes(searchTerm)) {
+            checkbox.style.display = "";
+          } else {
+            checkbox.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
