@@ -5,7 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Layout</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <style>
+      .step-content {
+        display: none;
+      }
+      .step-content.active {
+        display: block;
+      }
+      .step {
+        background-color: #34d399;
+        color: white;
+        cursor: pointer; /* Add cursor pointer for clickable steps */
+      }
+      .step.active {
+        background-color: #f87171;
+        color: white;
+      }
+      .step.completed {
+        background-color: #34d399;
+      }
+    </style>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -870,12 +889,111 @@
           </div>
         </header>
         <main class="flex-grow p-6 bg-slate-100 overflow-y-scroll">
-          <div class="mt-8 mx-auto md:mt-12 max-w-264">
+          <div class="mt-4 mx-auto md:mt-6">
             <div class="px-4">
               <span class="text-4xl font-bold"> Welcome home, Kicker </span>
               <div class="border-t border-slate-300 pt-2 pb-6 mt-2"></div>
 
-              <div class="flex justify-between md:justify-start items-center">
+              <div class="flex items-center justify-center mb-6 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                  <h2
+                    class="text-2xl font-semibold text-center text-slate-900 mb-6"
+                  >
+                    More than a registered agent
+                  </h2>
+                  <p class="text-sm text-center mb-8 text-slate-900">
+                    Much more than a name in a piece of paper, we are the
+                    compliance in a box solution.
+                  </p>
+
+                  <!-- Stepper Header -->
+                  <div class="flex justify-between mb-8">
+                    <div class="text-center" data-step="1">
+                      <div
+                        class="step w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-2 active"
+                      >
+                        <span class="text-white">1</span>
+                      </div>
+                      <p class="text-sm text-slate-900">
+                        Automated<br />peace of mind
+                      </p>
+                    </div>
+                    <div class="text-center" data-step="2">
+                      <div
+                        class="step w-10 h-10 rounded-full bg-slate-500 flex items-center justify-center mx-auto mb-2"
+                      >
+                        <span class="text-white">2</span>
+                      </div>
+                      <p class="text-sm text-slate-900">
+                        One-click<br />compliance services
+                      </p>
+                    </div>
+                    <div class="text-center" data-step="3">
+                      <div
+                        class="step w-10 h-10 rounded-full bg-slate-500 flex items-center justify-center mx-auto mb-2"
+                      >
+                        <span class="text-white">3</span>
+                      </div>
+                      <p class="text-sm text-slate-900">
+                        Concierge<br />support
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Stepper Content -->
+                  <form id="step-form">
+                    <div id="step-1" class="step-content text-center active">
+                      <h3 class="text-xl font-semibold mb-2 text-slate-900">
+                        Automated peace of mind
+                      </h3>
+                      <p class="text-sm text-slate-900 mb-4">
+                        We monitor if your company is in good standing with all
+                        government agencies, so we know what needs to be
+                        completed as it happens.
+                      </p>
+                    </div>
+                    <div id="step-2" class="step-content text-center">
+                      <h3 class="text-xl font-semibold mb-2 text-slate-900">
+                        One-click compliance services
+                      </h3>
+                      <p class="text-sm text-slate-900 mb-4">
+                        We offer one-click compliance solutions for filing forms
+                        and reports required by your business, simplifying the
+                        process.
+                      </p>
+                    </div>
+                    <div id="step-3" class="step-content text-center">
+                      <h3 class="text-xl font-semibold mb-2 text-slate-900">
+                        Concierge support
+                      </h3>
+                      <p class="text-sm text-slate-900 mb-4">
+                        Get personalized concierge support to help with your
+                        business compliance, guiding you through complex
+                        processes.
+                      </p>
+                    </div>
+                  </form>
+
+                  <!-- Stepper Buttons -->
+                  <div class="flex justify-between mt-8">
+                    <button
+                      id="prev-btn"
+                      class="bg-slate-700 text-white px-6 py-2 rounded-lg"
+                      disabled
+                    >
+                      Back
+                    </button>
+                    <button
+                      id="next-btn"
+                      class="bg-purple-600 text-white px-6 py-2 rounded-lg"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-between md:justify-start items-center mt-2">
                 <div class="text-xl font-bold mr-4">My updates</div>
                 <a class="cursor-pointer transition-all duration-200"> </a>
               </div>
