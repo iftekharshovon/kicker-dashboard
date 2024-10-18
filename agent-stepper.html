@@ -22,242 +22,439 @@
     </style>
   </head>
   <body class="text-slate-900">
-    <div class="flex h-screen">
-      <div class="flex-1 p-8 bg-slate-200">
-        <a href="agent-promo.html"> Back </a>
-        <div class="flex flex-col items-center justify-center h-max">
-          <h1 class="text-2xl font-bold mb-8">
-            Start your US company in minutes.
-          </h1>
-          <p class="mb-8">
-            Answer a few questions to help us form your new company.
-          </p>
-          <ol class="space-y-4">
-            <li>
-              <div
-                class="step flex items-center cursor-pointer active"
-                data-step="1"
-              >
-                <div
-                  class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 mr-4"
-                >
-                  1
-                </div>
-                <div>
-                  <h3 class="font-medium">Select State</h3>
-                  <p class="text-sm text-slate-400">
-                    Choose your business entity. Unsure? We'll help you choose.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="step flex items-center cursor-pointer" data-step="2">
-                <div
-                  class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 mr-4"
-                >
-                  4
-                </div>
-                <div>
-                  <h3 class="font-medium">Review and pay</h3>
-                  <p class="text-sm text-slate-400">
-                    Review your information and proceed to payment.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="step flex items-center cursor-pointer" data-step="3">
-                <div
-                  class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 mr-4"
-                >
-                  3
-                </div>
-                <div>
-                  <h3 class="font-medium">Complete</h3>
-                  <p class="text-sm text-slate-400">
-                    Choose the state to register your company.
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </div>
-      <div class="flex-1 p-8 bg-slate-100">
-        <div id="step-1" class="step-content active">
-          <h2 class="text-3xl font-bold mb-4">Select State</h2>
-          <div class="max-w-2xl w-full bg-gray-800 p-8 rounded-lg shadow-lg">
-            <!-- Header -->
-            <h2 class="text-2xl font-semibold text-center mb-4">
-              Change your Agent
-            </h2>
-            <p class="text-sm text-center text-gray-400 mb-6">
-              Select the states that your company is currently registered.
+    <div class="bg-white h-dvh">
+      <div class="flex h-full">
+        <div class="flex-1 p-8 bg-slate-200 hidden lg:block">
+          <a href="agent-promo.html"> Back </a>
+          <div class="flex flex-col items-center justify-center h-max">
+            <h1 class="text-2xl font-bold mb-8">
+              Start your US company in minutes.
+            </h1>
+            <p class="mb-8">
+              Answer a few questions to help us form your new company.
             </p>
-
-            <!-- Search Bar -->
-            <div class="mb-4">
-              <input
-                type="text"
-                id="search-input"
-                placeholder="Type state name here"
-                class="w-full p-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-purple-500"
-              />
-            </div>
-
-            <!-- State Checkboxes -->
-            <div id="state-list" class="grid grid-cols-3 gap-4 text-gray-300">
-              <label><input type="checkbox" class="mr-2" /> Alabama</label>
-              <label><input type="checkbox" class="mr-2" /> Alaska</label>
-              <label><input type="checkbox" class="mr-2" /> Arizona</label>
-              <label><input type="checkbox" class="mr-2" /> Arkansas</label>
-              <label><input type="checkbox" class="mr-2" /> California</label>
-              <label><input type="checkbox" class="mr-2" /> Colorado</label>
-              <label><input type="checkbox" class="mr-2" /> Connecticut</label>
-              <label><input type="checkbox" class="mr-2" /> Delaware</label>
-              <label><input type="checkbox" class="mr-2" /> Florida</label>
-              <label><input type="checkbox" class="mr-2" /> Georgia</label>
-              <label><input type="checkbox" class="mr-2" /> Hawaii</label>
-              <label><input type="checkbox" class="mr-2" /> Idaho</label>
-              <label><input type="checkbox" class="mr-2" /> Illinois</label>
-              <label><input type="checkbox" class="mr-2" /> Indiana</label>
-              <label><input type="checkbox" class="mr-2" /> Iowa</label>
-              <label><input type="checkbox" class="mr-2" /> Kansas</label>
-              <label><input type="checkbox" class="mr-2" /> Kentucky</label>
-              <label><input type="checkbox" class="mr-2" /> Louisiana</label>
-              <label><input type="checkbox" class="mr-2" /> Maine</label>
-              <label><input type="checkbox" class="mr-2" /> Maryland</label>
-              <label
-                ><input type="checkbox" class="mr-2" /> Massachusetts</label
-              >
-              <label><input type="checkbox" class="mr-2" /> Michigan</label>
-              <label><input type="checkbox" class="mr-2" /> Minnesota</label>
-              <label><input type="checkbox" class="mr-2" /> Mississippi</label>
-              <label><input type="checkbox" class="mr-2" /> Missouri</label>
-              <label><input type="checkbox" class="mr-2" /> Montana</label>
-              <label><input type="checkbox" class="mr-2" /> Nebraska</label>
-              <label><input type="checkbox" class="mr-2" /> Nevada</label>
-              <label
-                ><input type="checkbox" class="mr-2" /> New Hampshire</label
-              >
-              <label><input type="checkbox" class="mr-2" /> New Jersey</label>
-              <label><input type="checkbox" class="mr-2" /> New Mexico</label>
-              <label><input type="checkbox" class="mr-2" /> New York</label>
-              <label
-                ><input type="checkbox" class="mr-2" /> North Carolina</label
-              >
-              <label><input type="checkbox" class="mr-2" /> North Dakota</label>
-              <label><input type="checkbox" class="mr-2" /> Ohio</label>
-              <label><input type="checkbox" class="mr-2" /> Oklahoma</label>
-              <label><input type="checkbox" class="mr-2" /> Oregon</label>
-              <label><input type="checkbox" class="mr-2" /> Pennsylvania</label>
-              <label><input type="checkbox" class="mr-2" /> Rhode Island</label>
-              <label
-                ><input type="checkbox" class="mr-2" /> South Carolina</label
-              >
-              <label><input type="checkbox" class="mr-2" /> South Dakota</label>
-              <label><input type="checkbox" class="mr-2" /> Tennessee</label>
-              <label><input type="checkbox" class="mr-2" /> Texas</label>
-              <label><input type="checkbox" class="mr-2" /> Utah</label>
-              <label><input type="checkbox" class="mr-2" /> Vermont</label>
-              <label><input type="checkbox" class="mr-2" /> Virginia</label>
-              <label><input type="checkbox" class="mr-2" /> Washington</label>
-              <label
-                ><input type="checkbox" class="mr-2" /> West Virginia</label
-              >
-              <label><input type="checkbox" class="mr-2" /> Wisconsin</label>
-              <label><input type="checkbox" class="mr-2" /> Wyoming</label>
-            </div>
-
-            <!-- Continue Button -->
-            <button
-              class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg"
-              onclick="nextStep(2)"
+            <ol class="space-y-4">
+              <li>
+                <div
+                  class="step flex items-center cursor-pointer active"
+                  data-step="1"
+                >
+                  <div
+                    class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 mr-4"
+                  >
+                    1
+                  </div>
+                  <div>
+                    <h3 class="font-medium">Select State</h3>
+                    <p class="text-sm text-slate-400">
+                      Choose your business entity. Unsure? We'll help you
+                      choose.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="step flex items-center cursor-pointer"
+                  data-step="2"
+                >
+                  <div
+                    class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 mr-4"
+                  >
+                    4
+                  </div>
+                  <div>
+                    <h3 class="font-medium">Review and pay</h3>
+                    <p class="text-sm text-slate-400">
+                      Review your information and proceed to payment.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="step flex items-center cursor-pointer"
+                  data-step="3"
+                >
+                  <div
+                    class="step-number w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 mr-4"
+                  >
+                    3
+                  </div>
+                  <div>
+                    <h3 class="font-medium">Complete</h3>
+                    <p class="text-sm text-slate-400">
+                      Choose the state to register your company.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="flex-1 p-8 bg-slate-100">
+          <div id="step-1" class="step-content active">
+            <h2 class="text-3xl font-bold mb-4">Select State</h2>
+            <div
+              class="max-w-2xl w-full bg-slate-100 p-8 rounded-lg h-full shadow-lg"
             >
+              <!-- Header -->
+              <h2 class="text-2xl font-semibold text-center mb-4">
+                Change your Agent
+              </h2>
+              <p class="text-sm text-center text-slate-900 mb-6">
+                Select the states that your company is currently registered.
+              </p>
+              <div class="overflow-y-auto h-[300px]">
+                <!-- Search Bar -->
+                <div class="mb-4">
+                  <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Type state name here"
+                    class="w-full p-3 bg-slate-200 text-white rounded-lg focus:outline-none focus:ring focus:ring-slate-500 focus:ring-1"
+                  />
+                </div>
+                <!-- State Checkboxes -->
+                <div
+                  id="state-list"
+                  class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700"
+                >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Alabama</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Alaska</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Arizona</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Arkansas</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> California</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Colorado</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Connecticut</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Delaware</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Florida</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Georgia</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Hawaii</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Idaho</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Illinois</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Indiana</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Iowa</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Kansas</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Kentucky</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Louisiana</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Maine</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Maryland</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Massachusetts</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Michigan</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Minnesota</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Mississippi</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Missouri</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Montana</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Nebraska</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Nevada</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> New Hampshire</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> New Jersey</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> New Mexico</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> New York</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> North
+                    Carolina</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> North Dakota</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Ohio</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Oklahoma</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Oregon</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Pennsylvania</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Rhode Island</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> South
+                    Carolina</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> South Dakota</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Tennessee</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Texas</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Utah</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Vermont</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Virginia</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Washington</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> West Virginia</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Wisconsin</label
+                  >
+                  <label
+                    class="border border-slate-400 rounded-md p-2 flex items-center"
+                    ><input type="checkbox" class="mr-2" /> Wyoming</label
+                  >
+                </div>
+              </div>
+              <!-- Continue Button -->
+              <button
+                class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg"
+                onclick="nextStep(2)"
+              >
+                Continue
+              </button>
+              <!-- Note -->
+              <p class="text-sm text-center text-gray-400 mt-4">
+                You can only select 20 states at a time.
+              </p>
+            </div>
+          </div>
+          <div id="step-2" class="step-content">
+            <div
+              class="max-w-md w-full bg-slate-200 p-8 rounded-lg shadow-lg text-center"
+            >
+              <!-- Header -->
+              <h2 class="text-2xl font-semibold mb-2">Review & Pay</h2>
+              <p class="text-sm text-gray-400 mb-4">
+                You're almost done. Please confirm the states and the plan that
+                fit your needs.
+              </p>
+
+              <!-- Total Amount -->
+              <div class="text-slate-900 p-4 rounded-lg">
+                <!-- State and Plan -->
+                <div class="flex justify-between items-center">
+                  <h2 class="text-lg font-semibold">
+                    Minnesota - Autopilot Plan
+                  </h2>
+                  <p class="text-lg font-bold">
+                    $298<span class="text-sm">/year</span>
+                  </p>
+                </div>
+
+                <!-- Service List -->
+                <div class="mt-4 space-y-2">
+                  <div class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-4l6-6-1.414-1.414L9 11.172 6.707 8.879 5.293 10.293l3 3z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <p>Registered agent services</p>
+                  </div>
+                  <div class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-4l6-6-1.414-1.414L9 11.172 6.707 8.879 5.293 10.293l3 3z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <p>State annual reports</p>
+                  </div>
+                </div>
+
+                <!-- Extra Information -->
+                <div class="mt-4 text-sm text-gray-400">
+                  <p>
+                    Beneficial ownership information filings are only available
+                    in the Agent plan tied to your business’ Incorporation
+                    state.
+                  </p>
+                </div>
+
+                <!-- Remove Option -->
+                <div class="mt-2 flex justify-center">
+                  <button class="text-red-500 hover:text-red-600">
+                    Remove
+                  </button>
+                </div>
+              </div>
+
+              <!-- Terms and Conditions -->
+              <div class="mb-6">
+                <label class="inline-flex items-start">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox h-4 w-4 text-purple-500 border-gray-500 bg-gray-700 rounded mr-2 focus:ring-purple-500"
+                  />
+                  <span class="text-sm text-gray-400"
+                    >I read and agree with the
+                    <a href="#" class="text-purple-500 underline"
+                      >Terms of Service</a
+                    >
+                    and
+                    <a href="#" class="text-red-500 underline">Privacy Policy</a
+                    >.</span
+                  >
+                </label>
+              </div>
+
+              <!-- Payment Button -->
+              <div>
+                <button
+                  class="bg-orange-500 text-white w-full py-3 rounded-lg font-semibold hover:bg-orange-600"
+                  onclick="nextStep(3)"
+                >
+                  Go to Payment
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="step-3" class="step-content">
+            <h2 class="text-3xl font-bold mb-4">Payment</h2>
+            <p class="text-slate-400">
+              Choose the state to register your company.
+            </p>
+            <select class="mt-4 p-2 bg-slate-300 text-white rounded-lg w-full">
+              <option value="california">California</option>
+              <option value="delaware">Delaware</option>
+              <option value="nevada">Nevada</option>
+            </select>
+            <button class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg">
               Continue
             </button>
-
-            <!-- Note -->
-            <p class="text-sm text-center text-gray-400 mt-4">
-              You can only select 20 states at a time.
-            </p>
           </div>
-        </div>
-        <div id="step-2" class="step-content">
-          <div
-            class="max-w-md w-full bg-gray-800 p-8 rounded-lg shadow-lg text-center"
-          >
-            <!-- Header -->
-            <h2 class="text-2xl font-semibold mb-2">Review & Pay</h2>
-            <p class="text-sm text-gray-400 mb-4">
-              You're almost done. Please confirm the states and the plan that
-              fit your needs.
-            </p>
-
-            <!-- Total Amount -->
-            <div class="mb-6">
-              <p class="text-lg font-medium">Total Amount</p>
-              <p class="text-3xl font-bold">$0.00</p>
-            </div>
-
-            <!-- Terms and Conditions -->
-            <div class="mb-6">
-              <label class="inline-flex items-start">
-                <input
-                  type="checkbox"
-                  class="form-checkbox h-4 w-4 text-purple-500 border-gray-500 bg-gray-700 rounded mr-2 focus:ring-purple-500"
-                />
-                <span class="text-sm text-gray-400"
-                  >I read and agree with the
-                  <a href="#" class="text-purple-500 underline"
-                    >Terms of Service</a
-                  >
-                  and
-                  <a href="#" class="text-red-500 underline">Privacy Policy</a
-                  >.</span
-                >
-              </label>
-            </div>
-
-            <!-- Payment Button -->
-            <div>
-              <button
-                class="bg-orange-500 text-white w-full py-3 rounded-lg font-semibold hover:bg-orange-600"
-                onclick="nextStep(3)"
-              >
-                Go to Payment
-              </button>
-            </div>
-          </div>
-        </div>
-        <div id="step-3" class="step-content">
-          <h2 class="text-3xl font-bold mb-4">Payment</h2>
-          <p class="text-slate-400">
-            Choose the state to register your company.
-          </p>
-          <select class="mt-4 p-2 bg-slate-300 text-white rounded-lg w-full">
-            <option value="california">California</option>
-            <option value="delaware">Delaware</option>
-            <option value="nevada">Nevada</option>
-          </select>
-          <button
-            class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg"
-          >
-            Continue
-          </button>
-        </div>
-        <div id="step-4" class="step-content">
-          <h2 class="text-3xl font-bold mb-4">Review and Pay</h2>
-          <p class="text-slate-400">
-            Review your information and proceed to payment.
-          </p>
-          <a
-            href="dashboard.html"
-            class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg inline-block"
-          >
-            Pay Now
-          </a>
         </div>
       </div>
     </div>
