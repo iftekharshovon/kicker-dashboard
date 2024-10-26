@@ -23,8 +23,8 @@
   </head>
   <body class="text-slate-900">
     <div class="flex h-screen">
-      <div class="flex-1 p-8 bg-slate-200">
-        <a href="agent-promo.html"> Back </a>
+      <div class="flex-1 p-8 bg-slate-200 hidden md:block">
+        <a href="agent-promo.html" class="border rounded p-3"> Back </a>
         <div class="flex flex-col items-center justify-center h-max">
           <h1 class="text-2xl font-bold mb-8">Firstbase Mailroom™</h1>
           <p class="mb-8">
@@ -75,176 +75,89 @@
       </div>
       <div class="flex-1 p-8 bg-slate-100">
         <div id="step-1" class="step-content active">
-          <h2 class="text-3xl font-bold mb-4">Select State</h2>
-          <div class="max-w-2xl w-full bg-gray-800 p-8 rounded-lg shadow-lg">
+          <a href="agent-promo.html" class="border rounded p-3 block md:hidden">
+            Back
+          </a>
+          <h2 class="text-3xl font-bold mb-4">company Information</h2>
+        </div>
+        <div id="step-2" class="step-content">
+          <div class="text-slate-900 p-8 w-full max-w-xl">
+            <a
+              href="agent-promo.html"
+              class="border rounded p-3 block md:hidden"
+            >
+              Back
+            </a>
             <!-- Header -->
-            <h2 class="text-2xl font-semibold text-center mb-4">
-              Change your Agent
-            </h2>
-            <p class="text-sm text-center text-gray-400 mb-6">
-              Select the states that your company is currently registered.
-            </p>
+            <h1 class="text-center text-xl font-semibold mb-6">
+              Choose Mailroom address
+            </h1>
 
-            <!-- Search Bar -->
-            <div class="mb-4">
-              <input
-                type="text"
-                id="search-input"
-                placeholder="Type state name here"
-                class="w-full p-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-purple-500"
-              />
+            <!-- Address List -->
+            <div class="space-y-4 mb-6">
+              <label
+                class="block bg-slate-200 py-3 px-4 rounded flex items-center space-x-2 cursor-pointer"
+              >
+                <input
+                  type="radio"
+                  name="address"
+                  class="form-radio text-purple-500"
+                />
+                <span
+                  >1021 E Lincolnway, Cheyenne, WY 82001, United States</span
+                >
+              </label>
+              <label
+                class="block bg-slate-200 py-3 px-4 rounded flex items-center space-x-2 cursor-pointer"
+              >
+                <input
+                  type="radio"
+                  name="address"
+                  class="form-radio text-purple-500"
+                />
+                <span
+                  >1007 N Orange St, Wilmington, DE 19801, United States</span
+                >
+              </label>
+              <label
+                class="block bg-slate-200 py-3 px-4 rounded flex items-center space-x-2 cursor-pointer"
+              >
+                <input
+                  type="radio"
+                  name="address"
+                  class="form-radio text-purple-500"
+                />
+                <span
+                  >701 Tillery Street #12, Austin, Texas, 78702 United
+                  States</span
+                >
+              </label>
             </div>
 
-            <!-- State Checkboxes -->
-            <div id="state-list" class="grid grid-cols-3 gap-4 text-gray-300">
-              <label><input type="checkbox" class="mr-2" /> Alabama</label>
-              <label><input type="checkbox" class="mr-2" /> Alaska</label>
-              <label><input type="checkbox" class="mr-2" /> Arizona</label>
-              <label><input type="checkbox" class="mr-2" /> Arkansas</label>
-              <label><input type="checkbox" class="mr-2" /> California</label>
-              <label><input type="checkbox" class="mr-2" /> Colorado</label>
-              <label><input type="checkbox" class="mr-2" /> Connecticut</label>
-              <label><input type="checkbox" class="mr-2" /> Delaware</label>
-              <label><input type="checkbox" class="mr-2" /> Florida</label>
-              <label><input type="checkbox" class="mr-2" /> Georgia</label>
-              <label><input type="checkbox" class="mr-2" /> Hawaii</label>
-              <label><input type="checkbox" class="mr-2" /> Idaho</label>
-              <label><input type="checkbox" class="mr-2" /> Illinois</label>
-              <label><input type="checkbox" class="mr-2" /> Indiana</label>
-              <label><input type="checkbox" class="mr-2" /> Iowa</label>
-              <label><input type="checkbox" class="mr-2" /> Kansas</label>
-              <label><input type="checkbox" class="mr-2" /> Kentucky</label>
-              <label><input type="checkbox" class="mr-2" /> Louisiana</label>
-              <label><input type="checkbox" class="mr-2" /> Maine</label>
-              <label><input type="checkbox" class="mr-2" /> Maryland</label>
-              <label
-                ><input type="checkbox" class="mr-2" /> Massachusetts</label
-              >
-              <label><input type="checkbox" class="mr-2" /> Michigan</label>
-              <label><input type="checkbox" class="mr-2" /> Minnesota</label>
-              <label><input type="checkbox" class="mr-2" /> Mississippi</label>
-              <label><input type="checkbox" class="mr-2" /> Missouri</label>
-              <label><input type="checkbox" class="mr-2" /> Montana</label>
-              <label><input type="checkbox" class="mr-2" /> Nebraska</label>
-              <label><input type="checkbox" class="mr-2" /> Nevada</label>
-              <label
-                ><input type="checkbox" class="mr-2" /> New Hampshire</label
-              >
-              <label><input type="checkbox" class="mr-2" /> New Jersey</label>
-              <label><input type="checkbox" class="mr-2" /> New Mexico</label>
-              <label><input type="checkbox" class="mr-2" /> New York</label>
-              <label
-                ><input type="checkbox" class="mr-2" /> North Carolina</label
-              >
-              <label><input type="checkbox" class="mr-2" /> North Dakota</label>
-              <label><input type="checkbox" class="mr-2" /> Ohio</label>
-              <label><input type="checkbox" class="mr-2" /> Oklahoma</label>
-              <label><input type="checkbox" class="mr-2" /> Oregon</label>
-              <label><input type="checkbox" class="mr-2" /> Pennsylvania</label>
-              <label><input type="checkbox" class="mr-2" /> Rhode Island</label>
-              <label
-                ><input type="checkbox" class="mr-2" /> South Carolina</label
-              >
-              <label><input type="checkbox" class="mr-2" /> South Dakota</label>
-              <label><input type="checkbox" class="mr-2" /> Tennessee</label>
-              <label><input type="checkbox" class="mr-2" /> Texas</label>
-              <label><input type="checkbox" class="mr-2" /> Utah</label>
-              <label><input type="checkbox" class="mr-2" /> Vermont</label>
-              <label><input type="checkbox" class="mr-2" /> Virginia</label>
-              <label><input type="checkbox" class="mr-2" /> Washington</label>
-              <label
-                ><input type="checkbox" class="mr-2" /> West Virginia</label
-              >
-              <label><input type="checkbox" class="mr-2" /> Wisconsin</label>
-              <label><input type="checkbox" class="mr-2" /> Wyoming</label>
+            <!-- Terms Checkbox -->
+            <div class="flex items-center space-x-2 mb-6">
+              <input type="checkbox" class="form-checkbox" />
+              <span class="text-slate-400 text-sm">
+                I read and agree with the
+                <span class="text-red-500">Terms of Service</span> and
+                <span class="text-red-500">Privacy Policy</span>.
+              </span>
             </div>
 
             <!-- Continue Button -->
-            <button
-              class="mt-8 px-4 py-2 bg-green-500 text-white rounded-lg"
-              onclick="nextStep(2)"
-            >
-              Continue
-            </button>
-
-            <!-- Note -->
-            <p class="text-sm text-center text-gray-400 mt-4">
-              You can only select 20 states at a time.
-            </p>
-          </div>
-        </div>
-        <div id="step-2" class="step-content">
-          <div
-            class="max-w-md w-full bg-gray-800 p-8 rounded-lg shadow-lg text-center"
-          >
-            <div
-              class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md text-white"
-            >
-              <!-- Header -->
-              <h1 class="text-center text-xl font-semibold mb-6">
-                Choose Mailroom address
-              </h1>
-
-              <!-- Address List -->
-              <div class="space-y-4 mb-6">
-                <label
-                  class="block bg-gray-700 py-3 px-4 rounded flex items-center space-x-2 cursor-pointer"
-                >
-                  <input
-                    type="radio"
-                    name="address"
-                    class="form-radio text-purple-500"
-                  />
-                  <span
-                    >1021 E Lincolnway, Cheyenne, WY 82001, United States</span
-                  >
-                </label>
-                <label
-                  class="block bg-gray-700 py-3 px-4 rounded flex items-center space-x-2 cursor-pointer"
-                >
-                  <input
-                    type="radio"
-                    name="address"
-                    class="form-radio text-purple-500"
-                  />
-                  <span
-                    >1007 N Orange St, Wilmington, DE 19801, United States</span
-                  >
-                </label>
-                <label
-                  class="block bg-gray-700 py-3 px-4 rounded flex items-center space-x-2 cursor-pointer"
-                >
-                  <input
-                    type="radio"
-                    name="address"
-                    class="form-radio text-purple-500"
-                  />
-                  <span
-                    >701 Tillery Street #12, Austin, Texas, 78702 United
-                    States</span
-                  >
-                </label>
-              </div>
-
-              <!-- Terms Checkbox -->
-              <div class="flex items-center space-x-2 mb-6">
-                <input type="checkbox" class="form-checkbox text-purple-500" />
-                <span class="text-gray-400 text-sm">
-                  I read and agree with the
-                  <span class="text-red-500">Terms of Service</span> and
-                  <span class="text-red-500">Privacy Policy</span>.
-                </span>
-              </div>
-
-              <!-- Continue Button -->
-              <div class="flex justify-center">
-                <a
-                  href="mailroom-review.html"
-                  class="bg-gradient-to-r from-purple-500 to-orange-500 text-white py-2 px-6 rounded hover:opacity-90"
-                >
-                  Continue
-                </a>
-              </div>
+            <div class="flex justify-center">
+              <a
+                href="mailroom-review.html"
+                class="text-slate-900 border border-slate-400 rounded py-2 px-6 rounded hover:opacity-90"
+              >
+                Continue
+              </a>
+              <!-- <a
+                href="mailroom-review.html"
+                class="bg-gradient-to-r from-purple-500 to-orange-500 text-white py-2 px-6 rounded hover:opacity-90"
+              >
+                Continue
+              </a> -->
             </div>
           </div>
         </div>
